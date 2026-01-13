@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.u-page-grid-layout {
+  display: grid;
+  grid-template-areas:
+    "nav header"
+    "nav main";
+  grid-auto-columns: minmax(20rem, 1fr) 4fr;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.svg-icon {
+  width: 24px;
+}
+
+svg {
+  width: 12px;
+}
+
+.navigation {
+  grid-area: nav;
+  background-color: #1892d3;
+  color: #fff;
+  padding: 20px;
+}
+
+.navigation__logo {
+  display: grid;
+  grid-template-columns: 60px 2fr;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.navigation__logo .svg-icon {
+  width: 56px;
+}
+
+.navigation__logo h1 {
+  font-size: 1.5rem;
+  display: inline;
+}
+
+.navigation__menu,
+.navigation__settings {
+  display: grid;
+  row-gap: 25px;
+}
+
+.navigation__menu {
+  margin-bottom: 72px;
+}
+
+.navigation__logo :first-child,
+.navigation li :first-child {
+  margin: auto;
+}
+
+.navigation li {
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 60px 3fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-hub {
+  grid-area: header;
+  background-color: #fff;
+  padding: 20px 50px;
+  box-shadow: 0 5px 5px #ccc;
+  z-index: 1;
+}
+
+.user-hub__info {
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.info__search {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#search {
+  border-radius: 1rem;
+  background-color: #e1e8ef;
+  border: none;
+  flex: 1 1 300px;
+  font-size: 1.25rem;
+}
+
+.user-hub img {
+  border-radius: 50%;
+}
+
+.info__profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 20px;
+}
+
+.info__profile .profile__img {
+  width: 48px;
+}
+
+.user-hub__options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.options__welcome {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.options__list {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.options__list .list__item {
+  background-color: #1892d3;
+  font-weight: bold;
+  color: #fff;
+  padding: 8px 30px;
+  border-radius: 32px;
+}
+
+.welcome__img {
+  width: 72px;
+}
+
+.welcome__text {
+  font-weight: bold;
+}
+
+.dashboard {
+  grid-area: main;
+  background-color: #e1e8ef;
+  display: grid;
+  grid-template-areas:
+    "projects announcements"
+    "projects trending";
+  grid-auto-columns: 3fr 1fr;
+  grid-auto-rows: 1fr;
+  padding: 20px 20px 50px;
+  gap: 30px;
+}
+
+.dashboard__projects {
+  grid-area: projects;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects__title,
+.announcements__title,
+.trending__title {
+  font-size: 1.25rem;
+  padding: 10px 0;
+}
+
+.projects__list {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 30px;
+}
+
+.list__card {
+  background-color: #fff;
+  border-left: 8px solid #f0b32e;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 5px 5px #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  font-size: 1rem;
+}
+
+.card__description {
+  font-size: 0.875rem;
+  color: #707070;
+}
+
+.card__footer {
+  margin-top: auto;
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+}
+
+.dashboard__announcements {
+  grid-area: announcements;
+  display: flex;
+  flex-direction: column;
+}
+
+.announcements__list,
+.trending__list {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px #ccc;
+}
+
+.announcements__list .item__title,
+.trending__list .item__user {
+  font-size: 0.875rem;
+}
+
+.announcements__list .item__description,
+.trending__list .item__caption {
+  font-size: 0.75rem;
+  color: #707070;
+}
+
+.announcements__list {
+  flex-grow: 1;
+}
+
+.announcements__list hr {
+  border: 1px solid #ebebeb;
+  margin: 10px 0;
+}
+
+.dashboard__trending {
+  grid-area: trending;
+  display: flex;
+  flex-direction: column;
+}
+
+.trending__list {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.trending__list .list__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.trending__list .list__item img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
